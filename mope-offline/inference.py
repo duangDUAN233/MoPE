@@ -15,6 +15,13 @@ from finetune import load_expert_model, CHAR_BAG, PASSWORD_END, PASSWORD_START
 from finetune import getPrefixP
 from sklearn.preprocessing import StandardScaler
 
+def isValid(pwd):
+    for ch in pwd:
+        if ch in CHAR_BAG:
+            continue
+        else:
+            return False
+    return True
 
 def moe_next_char_distribution(prefix, expert_guesser, scaler, cluster_info_path):
     cluster_weights = getPrefixP(prefix, scaler, cluster_info_path)

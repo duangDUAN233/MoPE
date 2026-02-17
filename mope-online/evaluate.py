@@ -7,7 +7,6 @@ import itertools
 import tqdm
 from feature import *
 from collections import defaultdict
-from cossim import *
 from torch.utils.data import DataLoader, TensorDataset
 import torch.optim as optim
 
