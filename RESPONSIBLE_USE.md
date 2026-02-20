@@ -1,10 +1,9 @@
-# RESPONSIBLE_USE.md
 
 This repository is released to support **defensive security research**, **password-strength evaluation (PSM)**, and **reproducible academic experiments** on password modeling. It must **not** be used to facilitate unauthorized access, credential stuffing, or any activity that harms users or systems.
 
 ## Allowed Uses (Examples)
 - Evaluating password strength meters and defensive guessing curves in **offline** settings.
-- Reproducing results reported in the accompanying paper using **publicly accessible** datasets.
+- Reproducing results reported in the accompanying paper using datasets with lawful access.
 - Research on modeling, measurement, and mitigation of weak-password risks.
 
 ## Prohibited Uses
@@ -22,6 +21,8 @@ If you work with breached password datasets, you must:
 - Protect data with **access controls** (and encryption at rest where feasible).
 - Avoid releasing examples that could reveal real credentials; report only **aggregate statistics**.
 - Follow your institution’s policies and applicable laws/regulations.
+- If emails are present, replace them with salted hashes / random IDs and drop raw emails immediately; ensure logs do not contain identifiers.
+- Do not commit or upload intermediate artifacts (pair lists, caches, debug logs) derived from breached datasets.
 
 ## No Dataset Redistribution
 This repository does **not** include breached datasets. Users are responsible for obtaining datasets through lawful and ethically appropriate means. Do **not** upload or share datasets (or derived sensitive artifacts) in issues, pull requests, or public forks.
